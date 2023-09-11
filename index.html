@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html lang="">
-  <head>
-    <meta charset="utf-8">
-    <title>Plaso Kusay</title>
-    <style>
+
+<head>
+  <meta charset="utf-8">
+  <title>Plaso Kusay</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
     :root {
       --primary: #115737;
       --secondary: #606060;
     }
-    
-    h1, h2 {
+
+    h1,
+    h2 {
       font-weight: lighter;
     }
-    
+
     body {
       background: WhiteSmoke;
       font-family: proxima-nova, sans-serif;
@@ -22,13 +25,13 @@
       padding: 2rem;
       color: var(--secondary);
     }
-    
+
     main {
       display: flex;
       flex-direction: row;
       max-width: 1250px;
     }
-    
+
     .user-panel {
       background: var(--primary);
       display: flex;
@@ -39,27 +42,23 @@
       color: white;
       border-radius: 1rem;
     }
-    
+
     .user-panel a {
       color: white;
       text-decoration: none;
     }
-    
+
     .user-panel a:hover {
       text-decoration: underline;
     }
-    
-    .ml-4 {
-      margin-left: 1rem;
-    }
-    
+
     .user-panel img {
       object-fit: cover;
       border-radius: 50%;
       margin-bottom: 1rem;
       box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
     }
-    
+
     .title {
       width: 100%;
       display: flex;
@@ -68,7 +67,7 @@
       margin-bottom: 1rem;
       line-height: 0.5rem;
     }
-    
+
     .bordered {
       width: 100%;
       padding: 1rem 0;
@@ -77,31 +76,32 @@
       flex-direction: column;
       align-items: center;
     }
-    
+
     .title h1 {
       font-size: 24px;
     }
-    
+
     .title span {
       font-size: 12px;
     }
-    
+
     .info-section {
       width: 100%;
+      margin-left: 1rem;
     }
-    
+
     .info-card {
       background-color: white;
       border-radius: 1rem;
-      padding:  1rem 1.25rem 0.25rem;
+      padding: 1rem 1.25rem 0.25rem;
       box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
       font-size: 14px;
     }
-    
-    .info-card + .info-card {
+
+    .info-card+.info-card {
       margin-top: 1rem;
     }
-    
+
     .info-card h2 {
       color: var(--primary);
       margin: 0;
@@ -109,176 +109,228 @@
       font-family: Montserrat, sans-serif;
       letter-spacing: .6px;
     }
-    
+
     .info-card ul {
       padding: 0rem 1rem;
-      list-style: none; 
+      list-style: none;
     }
-    
+
     .info-card ul li::before {
-      content: "\25AA";  
-      color: var(--primary); 
-      font-weight: bold; 
-      display: inline-block; 
-      width: 0.5em; 
+      content: "\25AA";
+      color: var(--primary);
+      font-weight: bold;
+      display: inline-block;
+      width: 0.5em;
       margin-left: -1em;
     }
-    
+
     .info-card ul li span {
       color: black;
     }
-    
+
     .info-card ul li p {
       margin-left: -0.25em;
       margin-top: 0.25rem;
       display: block;
     }
-    
+
     .badge {
       border-radius: 15px;
       color: var(--primary);
-      background-color:  rgba(17,87,55, 0.1);
+      background-color: rgba(17, 87, 55, 0.1);
       padding: 0.5rem 1rem;
       display: inline-flex;
       font-size: 12px;
     }
-    
-    .badge + .badge {
+
+    .badge+.badge {
       margin-top: 0.25rem;
     }
-    
+
     .basic-info {
       font-size: 14px;
       display: flex;
       width: 100%;
     }
-    
+
     .basic-info svg {
       margin-right: 0.5rem;
     }
-    
+
     .id-circle {
       border-radius: 50%;
       background-color: #6CC417;
       padding-left: 0.1rem;
       display: inline-flex;
     }
-    </style>
-  </head>
-  <body>
-    <header></header>
-    <main>
-      <div class="user-panel">
-        <img src="photo.png" alt="Plaso" width="150" height="150">
-        <div class="title">
-          <span>MR</span>
-          <h1>Plaso Kusay</h1>
+
+    @media only screen and (max-width: 600px) {
+      main {
+        flex-direction: column;
+      }
+
+      .info-section {
+        margin-left: 0rem;
+        margin-top: 1rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header></header>
+  <main>
+    <div class="user-panel">
+      <img src="photo.png" alt="Plaso" width="150" height="150">
+      <div class="title">
+        <span>MR</span>
+        <h1>Plaso Kusay</h1>
+      </div>
+      <div class="bordered">
+        <div>
+          <div class="id-circle">iD</div> 300524851
         </div>
-        <div class="bordered">
+      </div>
+      <div class="bordered">
+        <div class="basic-info">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="#fff" width="32px" height="32px" viewBox="0 0 24 24">
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+            <g id="SVGRepo_iconCarrier">
+              <path
+                d="M19 3h-4.18C14.4 1.84 13.3 1 12 1c-1.3 0-2.4.84-2.82 2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 0c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm0 4c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm6 12H6v-1.4c0-2 4-3.1 6-3.1s6 1.1 6 3.1V19z">
+              </path>
+            </g>
+          </svg>
           <div>
-            <div class="id-circle">iD</div> 300524851
+            Student
+            <br>
+            School of Engineering and Computer Science
           </div>
-        </div>
-        <div class="bordered">
-          <div class="basic-info">
-           <svg xmlns="http://www.w3.org/2000/svg" fill="#fff" width="32px" height="32px" viewBox="0 0 24 24"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M19 3h-4.18C14.4 1.84 13.3 1 12 1c-1.3 0-2.4.84-2.82 2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 0c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm0 4c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm6 12H6v-1.4c0-2 4-3.1 6-3.1s6 1.1 6 3.1V19z"></path></g></svg>
-            <div>
-              Student
-              <br>
-              School of Engineering and Computer Science
-            </div>
-          </div>
-        </div>
-        <div class="bordered">
-          <div class="basic-info">
-            <svg height="24px" width="24px" version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" fill="#ffffff" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <style type="text/css"> .st0{fill:#ffffff;} </style> <g> <path class="st0" d="M440.917,67.925H71.083C31.827,67.925,0,99.752,0,139.008v233.984c0,39.256,31.827,71.083,71.083,71.083 h369.834c39.255,0,71.083-31.827,71.083-71.083V139.008C512,99.752,480.172,67.925,440.917,67.925z M178.166,321.72l-99.54,84.92 c-7.021,5.992-17.576,5.159-23.567-1.869c-5.992-7.021-5.159-17.576,1.87-23.567l99.54-84.92c7.02-5.992,17.574-5.159,23.566,1.87 C186.027,305.174,185.194,315.729,178.166,321.72z M256,289.436c-13.314-0.033-26.22-4.457-36.31-13.183l0.008,0.008l-0.032-0.024 c0.008,0.008,0.017,0.008,0.024,0.016L66.962,143.694c-6.98-6.058-7.723-16.612-1.674-23.583c6.057-6.98,16.612-7.723,23.582-1.674 l152.771,132.592c3.265,2.906,8.645,5.004,14.359,4.971c5.706,0.017,10.995-2.024,14.44-5.028l0.074-0.065l152.615-132.469 c6.971-6.049,17.526-5.306,23.583,1.674c6.048,6.97,5.306,17.525-1.674,23.583l-152.77,132.599 C282.211,284.929,269.322,289.419,256,289.436z M456.948,404.771c-5.992,7.028-16.547,7.861-23.566,1.869l-99.54-84.92 c-7.028-5.992-7.861-16.546-1.869-23.566c5.991-7.029,16.546-7.861,23.566-1.87l99.54,84.92 C462.107,387.195,462.94,397.75,456.948,404.771z"></path> </g> </g></svg>
-            <a href="mailto:kusaymoo@myvuw.ac.nz">kusaymoo@myvuw.ac.nz<a/>
-          </div>
-        </div>
-        <div class="bordered">
-          <div class="basic-info">
-            <svg fill="#fff" width="24px" height="24px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>chain</title> <path d="M0 22.944q0 2.464 1.76 4.224l3.072 3.104q1.76 1.728 4.224 1.728t4.256-1.728l2.688-2.976q1.376-1.344 1.664-3.232t-0.512-3.552l-6.784 6.784q-0.576 0.576-1.408 0.576t-1.44-0.576l-2.816-2.816q-0.576-0.608-0.576-1.408t0.576-1.408l6.784-6.816q-1.632-0.8-3.52-0.512t-3.264 1.664l-2.944 2.72q-1.76 1.76-1.76 4.224zM9.792 20.256q0 0.832 0.576 1.408t1.408 0.576 1.408-0.576l8.48-8.48q0.576-0.576 0.576-1.408t-0.576-1.408q-0.608-0.576-1.44-0.576t-1.408 0.576l-8.448 8.48q-0.576 0.576-0.576 1.408zM14.336 7.968q-0.288 1.888 0.512 3.552l6.816-6.816q0.576-0.576 1.408-0.576t1.408 0.576l2.816 2.848q0.576 0.576 0.576 1.408t-0.576 1.408l-6.784 6.784q1.632 0.832 3.52 0.512t3.264-1.664l2.944-2.944q1.76-1.76 1.76-4.224t-1.76-4.256l-2.816-2.816q-1.76-1.76-4.224-1.76t-4.256 1.76l-2.944 2.944q-1.344 1.376-1.664 3.264z"></path> </g></svg>
-            <a href="https://plasokusay.com">My Personal Website<a/>
-          </div>
-      </div>
-      </div>
-      <div class="info-section ml-4">
-        <div class="info-card">
-          <h2>BIO</h2>
-          <p>
-            I am passionate about making applications; primarily in JavaScript/TypeScript. I am particularly interested in the design, implementation, and evaluation of web systems/applications.
-          </p>
-          <p>
-            I am currently in the final year of my BE(Hons) majoring in Software Engineering with a specialisation in Networked Applications.
-          </p>
-        </div>
-        <div class="info-card">
-          <h2>ACADEMIC POSITIONS</h2>
-          <ul>
-            <li>
-              <span>Software Engineering Tutor</span>
-              <p>
-                Victoria University of Wellington, School of Engineering and Computer Science, Wellington, New Zealand 🞙 Mar 2023 - Jun 2023
-              </p>
-            </li>
-            <li>
-              <span>Computer Science Tutor</span>
-              <p>
-                Victoria University of Wellington, School of Engineering and Computer Science, Wellington, New Zealand 🞙 Mar 2022 - Oct 2022
-              </p>
-            </li>
-          </ul>
-        </div>
-        <div class="info-card">
-          <h2>NON-ACADEMIC POSITIONS</h2>
-          <ul>
-            <li>
-              <span>Chess Club President</span>
-              <p>
-                Victoria University of Wellington, Wellington, New Zealand 🞙 Nov 2022 - present
-              </p>
-            </li>
-            <li>
-              <span>Student Ambassador</span>
-              <p>
-                Victoria University of Wellington, Wellington, New Zealand 🞙 Feb 2021 - Oct 2022
-              </p>
-            </li>
-          </ul>
-        </div>
-        <div class="info-card">
-          <h2>LANGUAGES</h2>
-          <ul>
-            <li>
-              <span>English</span>
-              <p>
-                Can read, write, speak, understand and peer review
-              </p>
-            </li>
-            <li>
-              <span>Karen (Burma)</span>
-              <p>
-                Can speak, and understand
-              </p>
-            </li>
-          </ul>
-        </div>
-        <div class="info-card">
-          <h2>FIELDS OF RESEARCH</h2>
-          <p>
-            <span class="badge">
-              Software Engineering
-            </span>
-            <span class="badge">
-              Web Development
-            </span>
-            <span class="badge">
-              User Testing
-            </span>
-          </p>
         </div>
       </div>
-    </main>
-    <footer></footer>
-  </body>
+      <div class="bordered">
+        <div class="basic-info">
+          <svg height="24px" width="24px" version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" fill="#ffffff"
+            stroke="#ffffff">
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+            <g id="SVGRepo_iconCarrier">
+              <style type="text/css">
+                .st0 {
+                  fill: #ffffff;
+                }
+              </style>
+              <g>
+                <path class="st0"
+                  d="M440.917,67.925H71.083C31.827,67.925,0,99.752,0,139.008v233.984c0,39.256,31.827,71.083,71.083,71.083 h369.834c39.255,0,71.083-31.827,71.083-71.083V139.008C512,99.752,480.172,67.925,440.917,67.925z M178.166,321.72l-99.54,84.92 c-7.021,5.992-17.576,5.159-23.567-1.869c-5.992-7.021-5.159-17.576,1.87-23.567l99.54-84.92c7.02-5.992,17.574-5.159,23.566,1.87 C186.027,305.174,185.194,315.729,178.166,321.72z M256,289.436c-13.314-0.033-26.22-4.457-36.31-13.183l0.008,0.008l-0.032-0.024 c0.008,0.008,0.017,0.008,0.024,0.016L66.962,143.694c-6.98-6.058-7.723-16.612-1.674-23.583c6.057-6.98,16.612-7.723,23.582-1.674 l152.771,132.592c3.265,2.906,8.645,5.004,14.359,4.971c5.706,0.017,10.995-2.024,14.44-5.028l0.074-0.065l152.615-132.469 c6.971-6.049,17.526-5.306,23.583,1.674c6.048,6.97,5.306,17.525-1.674,23.583l-152.77,132.599 C282.211,284.929,269.322,289.419,256,289.436z M456.948,404.771c-5.992,7.028-16.547,7.861-23.566,1.869l-99.54-84.92 c-7.028-5.992-7.861-16.546-1.869-23.566c5.991-7.029,16.546-7.861,23.566-1.87l99.54,84.92 C462.107,387.195,462.94,397.75,456.948,404.771z">
+                </path>
+              </g>
+            </g>
+          </svg>
+          <a href="mailto:kusaymoo@myvuw.ac.nz">kusaymoo@myvuw.ac.nz<a />
+        </div>
+      </div>
+      <div class="bordered">
+        <div class="basic-info">
+          <svg fill="#fff" width="24px" height="24px" viewBox="0 0 32 32" version="1.1"
+            xmlns="http://www.w3.org/2000/svg">
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+            <g id="SVGRepo_iconCarrier">
+              <title>chain</title>
+              <path
+                d="M0 22.944q0 2.464 1.76 4.224l3.072 3.104q1.76 1.728 4.224 1.728t4.256-1.728l2.688-2.976q1.376-1.344 1.664-3.232t-0.512-3.552l-6.784 6.784q-0.576 0.576-1.408 0.576t-1.44-0.576l-2.816-2.816q-0.576-0.608-0.576-1.408t0.576-1.408l6.784-6.816q-1.632-0.8-3.52-0.512t-3.264 1.664l-2.944 2.72q-1.76 1.76-1.76 4.224zM9.792 20.256q0 0.832 0.576 1.408t1.408 0.576 1.408-0.576l8.48-8.48q0.576-0.576 0.576-1.408t-0.576-1.408q-0.608-0.576-1.44-0.576t-1.408 0.576l-8.448 8.48q-0.576 0.576-0.576 1.408zM14.336 7.968q-0.288 1.888 0.512 3.552l6.816-6.816q0.576-0.576 1.408-0.576t1.408 0.576l2.816 2.848q0.576 0.576 0.576 1.408t-0.576 1.408l-6.784 6.784q1.632 0.832 3.52 0.512t3.264-1.664l2.944-2.944q1.76-1.76 1.76-4.224t-1.76-4.256l-2.816-2.816q-1.76-1.76-4.224-1.76t-4.256 1.76l-2.944 2.944q-1.344 1.376-1.664 3.264z">
+              </path>
+            </g>
+          </svg>
+          <a href="https://plasokusay.com">My Personal Website<a />
+        </div>
+      </div>
+    </div>
+    <div class="info-section">
+      <div class="info-card">
+        <h2>BIO</h2>
+        <p>
+          I am passionate about making applications; primarily in JavaScript/TypeScript. I am particularly interested in
+          the design, implementation, and evaluation of web systems/applications.
+        </p>
+        <p>
+          I am currently in the final year of my BE(Hons) majoring in Software Engineering with a specialisation in
+          Networked Applications.
+        </p>
+      </div>
+      <div class="info-card">
+        <h2>ACADEMIC POSITIONS</h2>
+        <ul>
+          <li>
+            <span>Software Engineering Tutor</span>
+            <p>
+              Victoria University of Wellington, School of Engineering and Computer Science, Wellington, New Zealand 🞙
+              Mar 2023 - Jun 2023
+            </p>
+          </li>
+          <li>
+            <span>Computer Science Tutor</span>
+            <p>
+              Victoria University of Wellington, School of Engineering and Computer Science, Wellington, New Zealand 🞙
+              Mar 2022 - Oct 2022
+            </p>
+          </li>
+        </ul>
+      </div>
+      <div class="info-card">
+        <h2>NON-ACADEMIC POSITIONS</h2>
+        <ul>
+          <li>
+            <span>Chess Club President</span>
+            <p>
+              Victoria University of Wellington, Wellington, New Zealand 🞙 Nov 2022 - present
+            </p>
+          </li>
+          <li>
+            <span>Student Ambassador</span>
+            <p>
+              Victoria University of Wellington, Wellington, New Zealand 🞙 Feb 2021 - Oct 2022
+            </p>
+          </li>
+        </ul>
+      </div>
+      <div class="info-card">
+        <h2>LANGUAGES</h2>
+        <ul>
+          <li>
+            <span>English</span>
+            <p>
+              Can read, write, speak, understand and peer review
+            </p>
+          </li>
+          <li>
+            <span>Karen (Burma)</span>
+            <p>
+              Can speak, and understand
+            </p>
+          </li>
+        </ul>
+      </div>
+      <div class="info-card">
+        <h2>FIELDS OF RESEARCH</h2>
+        <p>
+          <span class="badge">
+            Software Engineering
+          </span>
+          <span class="badge">
+            Web Development
+          </span>
+          <span class="badge">
+            User Testing
+          </span>
+        </p>
+      </div>
+    </div>
+  </main>
+  <footer></footer>
+</body>
+
 </html>
